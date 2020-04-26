@@ -42,7 +42,7 @@ More details are provided by:
 ## ***To Tracking***
 
 ```
-python tracking/run_tracker.py -s DragonBaby [-d (display fig)] [-f (save fig)]
+python run_trackers.py usage : run_trackers.py -t <trackers> -s <sequences> -e <evaltypes> -n <testname> 
 ```
 
 ## ***To Pre-Training***

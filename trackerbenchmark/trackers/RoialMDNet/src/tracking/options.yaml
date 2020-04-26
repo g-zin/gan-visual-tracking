@@ -1,0 +1,73 @@
+use_gpu: true
+set_type: "OTB"
+success_thr: 0.0
+visual_log: false
+savefig_dir: ''
+visualize: false
+seq_name: 'Basketball'
+
+# paths
+model_path: "src/models/rt_mdnet_imagenet_pt.pth"
+data_path: "src/data"
+result_path: './result.json'
+
+# input size
+img_size: 107
+padding: 1.2
+
+# batch size
+batch_pos: 32
+batch_neg: 96
+batch_neg_cand: 1024
+batch_test: 256
+
+# candidates sampling
+n_samples: 256
+trans_f: 0.6
+trans_f_expand: 1.4
+scale_f: 1.05
+
+# bounding box regression
+n_bbreg: 1000
+overlap_bbreg: [0.6, 1]
+trans_bbreg: 0.3
+scale_bbreg: [1, 2]
+
+# initial training
+lr_init: 0.0001
+maxiter_init: 50
+n_pos_init: 500
+n_neg_init: 5000
+overlap_pos_init: [0.7, 1]
+overlap_neg_init: [0, 0.5]
+
+# online training
+lr_update: 0.0003
+maxiter_update: 15
+n_pos_update: 50
+n_neg_update: 200
+overlap_pos_update: [0.7, 1]
+overlap_neg_update: [0, 0.3]
+
+# update criteria
+long_interval: 10
+n_frames_long: 100
+n_frames_short: 20
+
+# training
+grad_clip: 10
+lr_mult: {'fc6': 10}
+ft_layers: ['fc']
+
+# RT
+momentum: 0.9
+w_decay: 0.0005
+adaptive_align: true
+jitter: true
+
+# NetG
+batch_gnet: 32
+lr_g_init: 0.005
+maxiter_g_init: 300
+lr_g_update: 0.0005
+maxiter_g_update: 1

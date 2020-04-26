@@ -9,13 +9,50 @@ I modified the architecture of the baseline to get MDGanet, ROIAL-MDNet, MDResNe
 
 More details are provided by:
 
--[Thesis](https://scholars.wlu.ca/etd/2196/)
+- [Thesis](https://scholars.wlu.ca/etd/2196/)
 
--[Presentation](https://github.com/g-zin/gan-visual-tracking/files/4535249/GANs.for.online.viusal.object.tracking.systems_presentation.pdf)
+- [Presentation](https://github.com/g-zin/gan-visual-tracking/files/4535249/GANs.for.online.viusal.object.tracking.systems_presentation.pdf)
 
--[Demo](https://youtu.be/s2DPnLAxFuQ)
+- [Demo](https://youtu.be/s2DPnLAxFuQ)
 
 ## **Prerequisites:**
+- Python +3.5
+
+- matplotlib==3.0.3
+
+- numpy==1.16.3
+
+- opencv-python==3.4.4.19
+
+- Pillow==5.3.0
+
+- pyparsing==2.4.0
+
+- PyYAML==3.13
+
+- scikit-learn==0.20.2
+
+- torch==1.1.0
+
+- torch-gpu==1.0.0
+
+- torchvision==0.3.0
+
+## **Usage**
+## ***To Tracking***
+
+```
+python tracking/run_tracker.py -s DragonBaby [-d (display fig)] [-f (save fig)]
+```
+
+## ***To Pre-Training***
+
+- Download [VGG-M](http://www.vlfeat.org/matconvnet/models/imagenet-vgg-m.mat) (matconvnet model) and save as "models/imagenet-vgg-m.mat"
+
+- Pretraining on VOT-OTB:
+  - Download [VOT](http://www.votchallenge.net/) datasets into "datasets/VOT/vot201x"
+- Pretraining on ImageNet-VID
+  - Download [ImageNet-VID](http://bvisionweb1.cs.unc.edu/ilsvrc2015/download-videos-3j16.php#vid) dataset into "datasets/ILSVRC"
 
 
 

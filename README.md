@@ -7,7 +7,7 @@ This implemntation is based on [MDNET](https://github.com/HyeonseobNam/py-MDNet)
 
 I modified the architecture of the baseline to get MDGanet, ROIAL-MDNet, MDResNet and MDResGaNet trackers.
 
-More details are provided by:
+For more information:
 
 - [Thesis](https://scholars.wlu.ca/etd/2196/)
 
@@ -15,37 +15,21 @@ More details are provided by:
 
 - [Demo](https://youtu.be/s2DPnLAxFuQ)
 
-## **Prerequisites:**
-- Python +3.5
 
-- matplotlib==3.0.3
-
-- numpy==1.16.3
-
-- opencv-python==3.4.4.19
-
-- Pillow==5.3.0
-
-- pyparsing==2.4.0
-
-- PyYAML==3.13
-
-- scikit-learn==0.20.2
-
-- torch==1.1.0
-
-- torch-gpu==1.0.0
-
-- torchvision==0.3.0
 
 ## **Usage**
-## ***To Tracking***
+### ***For Tracking***
 
 ```
-python run_trackers.py usage : run_trackers.py -t <trackers> -s <sequences> -e <evaltypes> -n <testname> 
+python run_trackers.py  -t <trackers> -s <sequences> -e <evaltypes> -n <testname> 
+```
+For example to run ROIAL tracker: 
+```
+python run_trackers.py  -t RoialMDNet -s Basketball -e OPE -n tb50 
 ```
 
-## ***To Pre-Training***
+
+### ***For Pre-Training***
 
 - Download [VGG-M](http://www.vlfeat.org/matconvnet/models/imagenet-vgg-m.mat) (matconvnet model) and save as "models/imagenet-vgg-m.mat"
 
